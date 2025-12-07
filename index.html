@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFest 2025 - Registration</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1> TechFest 2025</h1>
+        <p class="subtitle">Student Registration</p>
+
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+                <div class="error-message" id="nameError">Please enter a valid name (alphabets only)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="Reg-no@isbstudent.comsats.edu.pk">
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="text" id="phone" placeholder="03001234567" maxlength="11">
+                <div class="error-message" id="phoneError">Phone number must be exactly 11 digits</div>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department <span class="required">*</span></label>
+                <select id="department">
+                    <option value="">Select your department</option>
+                    <option value="SE">Software Engineering</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="AI">Artificial Intelligence</option>
+                </select>
+                <div class="error-message" id="deptError">Please select a department</div>
+            </div>
+
+            <div class="form-group">
+                <label>Event Type <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="workshop" name="eventType" value="Workshop">
+                        <label for="workshop">Workshop</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="seminar" name="eventType" value="Seminar">
+                        <label for="seminar">Seminar</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="hackathon" name="eventType" value="Hackathon">
+                        <label for="hackathon">Hackathon</label>
+                    </div>
+                </div>
+                <div class="error-message" id="eventError">Please select an event type</div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments (Optional)</label>
+                <textarea id="comments" placeholder="Any additional information..." maxlength="100"></textarea>
+                <div class="char-counter" id="charCounter">100 characters left</div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn" disabled>Submit Registration</button>
+        </form>
+
+        <div class="event-link">
+            <a href="events.html">View Event Details →</a>
+        </div>
+    </div>
+
+    <div class="success-popup" id="successPopup">
+        <div class="success-content">
+            <div class="success-icon">✓</div>
+            <h2>Registration Successful!</h2>
+            <p id="successMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
